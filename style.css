@@ -442,11 +442,35 @@ OPENING
 
 .opening-text{
 
-    margin-top:30px;
+    max-width:650px;
+
+    margin:32px auto 0;
+
+    text-align:center;
+
+}
+
+.opening-text p{
 
     color:var(--text-soft);
 
     line-height:2;
+
+}
+
+.opening-text p + p{
+
+    margin-top:14px;
+
+}
+
+.opening-button{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
 
 }
 
@@ -1118,27 +1142,40 @@ VIDEO SECTION
 
     display:flex;
 
+    flex-direction:column;
+
     justify-content:center;
 
     align-items:center;
 
-    padding:80px 20px;
+    text-align:center;
+
+    padding:100px 20px;
 
 }
 
 .video-wrapper{
 
-    width:min(100%,900px);
+    position:relative;
 
-    border-radius:28px;
+    width:min(95vw,420px);
 
-    overflow:hidden;
+    background:#ffffff;
 
-    border:1px solid var(--border);
+    padding:16px 16px 72px;
 
-    box-shadow:var(--shadow);
+    border-radius:20px;
 
-    background:#000;
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.45);
+
+    transition:.45s ease;
+
+}
+
+.video-wrapper:hover{
+
+    transform:translateY(-6px) rotate(0deg);
 
 }
 
@@ -1146,10 +1183,42 @@ VIDEO SECTION
 
     width:100%;
 
+    aspect-ratio:9/16;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
     display:block;
 
 }
 
+
+.video-content{
+
+    margin-top:40px;
+
+    max-width:500px;
+
+}
+
+.video-content h2{
+
+    margin:18px 0;
+
+    font-family:"Orbitron";
+
+    font-size:clamp(30px,6vw,46px);
+
+}
+
+.video-content p{
+
+    color:rgba(255,255,255,.75);
+
+    line-height:2;
+
+}
 
 
 /*==================================================
@@ -1601,6 +1670,52 @@ RESPONSIVE MOBILE
     .letter-card{
 
         padding:24px 20px;
+
+    }
+
+    /* VIDEO RESPONSIVE */
+
+    .video-wrapper{
+
+        width:90vw;
+
+        max-width:390px;
+
+        padding:14px 14px 60px;
+
+    }
+
+    .memory-video{
+
+        width:100%;
+
+        aspect-ratio:9/16;
+
+        object-fit:cover;
+
+        border-radius:12px;
+
+    }
+
+    .video-content{
+
+        margin-top:35px;
+
+        width:90vw;
+
+    }
+
+    .video-content h2{
+
+        font-size:30px;
+
+    }
+
+    .video-content p{
+
+        font-size:15px;
+
+        line-height:1.8;
 
     }
 
